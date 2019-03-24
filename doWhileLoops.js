@@ -19,7 +19,11 @@ print('1st Loop:');
 text = '';
 
 // Write 1st loop here:
-
+i = -1;
+do {
+  i += 1;
+  text += i + ' ';
+} while (i < 4)
 
 print(text); // Should print `0 1 2 3 4 `.
 
@@ -29,6 +33,11 @@ print('2nd Loop:');
 text = '';
 
 // Write 2nd loop here:
+i = 0;
+do {
+  i += 1;
+  text += i + ' ';
+} while (i < 5); 
 
 
 print(text); // Should print `1 2 3 4 5 `.
@@ -39,7 +48,11 @@ print('3rd Loop:');
 text = '';
 
 // Write 3rd loop here:
-
+i = 6;
+do {
+  i -= 1;
+  text += i + ' ';
+} while (i > 1);
 
 print(text); // Should print `5 4 3 2 1 `.
 
@@ -49,7 +62,11 @@ print('4th Loop:');
 text = '';
 
 // Write 4th loop here:
-
+i = 0;
+do {
+  i += 5;
+  text += i + ' ';
+} while (i < 50);
 
 print(text); // Should print `5 10 15 20 25 30 35 40 45 50 `.
 
@@ -61,7 +78,16 @@ print('5th Loop:');
 text = '';
 
 // Write 5th loop here:
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+do {
+  i = getRandomIntInclusive(0,9);
+  text += i + ' ';
+} while(i != 8);
 
 print(text); // Should print something like `4 7 2 9 8 `, or `9 0 8 ` or `8 `.
 
